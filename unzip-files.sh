@@ -26,6 +26,10 @@ chmod 755 ../../../vendor/zte/$DEVICE/proprietary/hci_qcomm_init
 
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/init.qcom.bt.sh -d ../../../vendor/zte/$DEVICE/proprietary/
 
+# tslib
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/pointercal -d ../../../vendor/zte/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/ts.conf -d ../../../vendor/zte/$DEVICE/proprietary/
+
 # EGL
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/egl/libEGL_adreno200.so -d ../../../vendor/zte/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/egl/libGLESv2_adreno200.so -d ../../../vendor/zte/$DEVICE/proprietary/
@@ -131,6 +135,8 @@ PRODUCT_COPY_FILES += \\
     vendor/zte/__DEVICE__/proprietary/libril-qcril-hook-oem.so:system/lib/libril-qcril-hook-oem.so \\
     vendor/zte/__DEVICE__/proprietary/libdiag.so:system/lib/libdiag.so \\
     vendor/zte/__DEVICE__/proprietary/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \\
+    vendor/zte/__DEVICE__/proprietary/pointercal:system/etc/pointercal \\
+    vendor/zte/__DEVICE__/proprietary/ts.conf:system/etc/ts.conf \\
     vendor/zte/__DEVICE__/proprietary/liboncrpc.so:system/lib/liboncrpc.so \\
     vendor/zte/__DEVICE__/proprietary/libqmi.so:system/lib/libqmi.so \\
     vendor/zte/__DEVICE__/proprietary/libdsm.so:system/lib/libdsm.so \\

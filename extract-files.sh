@@ -28,10 +28,6 @@ chmod 755 ../../../vendor/zte/$DEVICE/proprietary/hci_qcomm_init
 
 adb pull /system/etc/init.qcom.bt.sh ../../../vendor/zte/$DEVICE/proprietary/init.qcom.bt.sh
 
-# tslib
-adb pull /system/etc/pointercal ../../../vendor/zte/$DEVICE/proprietary/pointercal
-adb pull /system/etc/ts.conf ../../../vendor/zte/$DEVICE/proprietary/ts.conf
-
 # EGL
 adb pull /system/lib/egl/libEGL_adreno200.so ../../../vendor/zte/$DEVICE/proprietary/libEGL_adreno200.so
 adb pull /system/lib/egl/libGLESv2_adreno200.so ../../../vendor/zte/$DEVICE/proprietary/libGLESv2_adreno200.so
@@ -137,8 +133,6 @@ PRODUCT_COPY_FILES += \\
     vendor/zte/__DEVICE__/proprietary/libril-qcril-hook-oem.so:system/lib/libril-qcril-hook-oem.so \\
     vendor/zte/__DEVICE__/proprietary/libdiag.so:system/lib/libdiag.so \\
     vendor/zte/__DEVICE__/proprietary/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \\
-    vendor/zte/__DEVICE__/proprietary/pointercal:system/etc/pointercal \\
-    vendor/zte/__DEVICE__/proprietary/ts.conf:system/etc/tsconf \\
     vendor/zte/__DEVICE__/proprietary/liboncrpc.so:system/lib/liboncrpc.so \\
     vendor/zte/__DEVICE__/proprietary/libqmi.so:system/lib/libqmi.so \\
     vendor/zte/__DEVICE__/proprietary/libdsm.so:system/lib/libdsm.so \\

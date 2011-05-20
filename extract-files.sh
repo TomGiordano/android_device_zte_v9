@@ -28,6 +28,10 @@ chmod 755 ../../../vendor/zte/$DEVICE/proprietary/hci_qcomm_init
 
 adb pull /system/etc/init.qcom.bt.sh ../../../vendor/zte/$DEVICE/proprietary/init.qcom.bt.sh
 
+# ti_gauge
+adb pull /system/etc/ti_gauge.bqfs ../../../vendor/zte/$DEVICE/proprietary/ti_gauge.bqfs
+adb pull /system/etc/ti_gauge.dffs ../../../vendor/zte/$DEVICE/proprietary/ti_gauge.dffs
+
 # EGL
 adb pull /system/lib/egl/libEGL_adreno200.so ../../../vendor/zte/$DEVICE/proprietary/libEGL_adreno200.so
 adb pull /system/lib/egl/libGLESv2_adreno200.so ../../../vendor/zte/$DEVICE/proprietary/libGLESv2_adreno200.so
@@ -133,6 +137,8 @@ PRODUCT_COPY_FILES += \\
     vendor/zte/__DEVICE__/proprietary/libril-qcril-hook-oem.so:system/lib/libril-qcril-hook-oem.so \\
     vendor/zte/__DEVICE__/proprietary/libdiag.so:system/lib/libdiag.so \\
     vendor/zte/__DEVICE__/proprietary/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \\
+    vendor/zte/__DEVICE__/proprietary/ti_gauge.bqfs:system/etc/ti_gauge.bqfs \\
+    vendor/zte/__DEVICE__/proprietary/ti_gauge.dffs:system/etc/ti_gauge.dffs \\
     vendor/zte/__DEVICE__/proprietary/liboncrpc.so:system/lib/liboncrpc.so \\
     vendor/zte/__DEVICE__/proprietary/libqmi.so:system/lib/libqmi.so \\
     vendor/zte/__DEVICE__/proprietary/libdsm.so:system/lib/libdsm.so \\

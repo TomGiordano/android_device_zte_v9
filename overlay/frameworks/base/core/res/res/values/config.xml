@@ -143,4 +143,18 @@
     <integer-array name="config_keyboardTapVibePattern">
         <item>30</item>
     </integer-array>
+
+    <!-- toggles weather device is tablet or phone. right now,
+    tablets are know to have soft buttons, but phones have harware
+    buttons. this might change in the future - especially when the
+    honeycomb modifications become available for phones -->
+    <bool name="cm_default_is_tablet">true</bool>
+
+    <!-- Specifies the amount of time to disable virtual keys after the screen is touched
+         in order to filter out accidental virtual key presses due to swiping gestures
+         or taps near the edge of the display.  May be 0 to disable the feature.
+         It is recommended that this value be no more than 250 ms.
+         This feature should be disabled for most devices. -->
+    <integer name="config_virtualKeyQuietTimeMillis">250</integer>
+
 </resources>

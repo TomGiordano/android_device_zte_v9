@@ -56,7 +56,8 @@ $(call inherit-product-if-exists, vendor/zte/v9/v9-vendor.mk)
 DISABLE_DEXPREOPT := false
 
 PRODUCT_COPY_FILES += \
-    device/zte/v9/qwerty.kl:system/usr/keylayout/qwerty.kl
+    device/zte/v9/qwerty.kl:system/usr/keylayout/qwerty.kl \
+    device/zte/v9/qwerty.kl:system/usr/keylayout/v9_keypad.kl
 
 # fstab
 PRODUCT_COPY_FILES += \

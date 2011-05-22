@@ -30,6 +30,10 @@ unzip -j -o ../../../${DEVICE}_update.zip system/etc/init.qcom.bt.sh -d ../../..
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/ti_gauge.bqfs -d ../../../vendor/zte/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/ti_gauge.dffs -d ../../../vendor/zte/$DEVICE/proprietary/
 
+# tslib
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/pointercal -d ../../../vendor/zte/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/ts.conf -d ../../../vendor/zte/$DEVICE/proprietary/
+
 # EGL
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/egl/libEGL_adreno200.so -d ../../../vendor/zte/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/egl/libGLESv2_adreno200.so -d ../../../vendor/zte/$DEVICE/proprietary/
@@ -137,6 +141,8 @@ PRODUCT_COPY_FILES += \\
     vendor/zte/__DEVICE__/proprietary/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \\
     vendor/zte/__DEVICE__/proprietary/ti_gauge.bqfs:system/etc/ti_gauge.bqfs \\
     vendor/zte/__DEVICE__/proprietary/ti_gauge.dffs:system/etc/ti_gauge.dffs \\
+    vendor/zte/__DEVICE__/proprietary/pointercal:system/etc/pointercal \\
+    vendor/zte/__DEVICE__/proprietary/ts.conf:system/etc/tsconf \\
     vendor/zte/__DEVICE__/proprietary/liboncrpc.so:system/lib/liboncrpc.so \\
     vendor/zte/__DEVICE__/proprietary/libqmi.so:system/lib/libqmi.so \\
     vendor/zte/__DEVICE__/proprietary/libdsm.so:system/lib/libdsm.so \\

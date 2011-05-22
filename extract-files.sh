@@ -32,9 +32,8 @@ adb pull /system/etc/init.qcom.bt.sh ../../../vendor/zte/$DEVICE/proprietary/ini
 adb pull /system/etc/ti_gauge.bqfs ../../../vendor/zte/$DEVICE/proprietary/ti_gauge.bqfs
 adb pull /system/etc/ti_gauge.dffs ../../../vendor/zte/$DEVICE/proprietary/ti_gauge.dffs
 
-# tslib
+# pointercal
 adb pull /system/etc/pointercal ../../../vendor/zte/$DEVICE/proprietary/pointercal
-adb pull /system/etc/ts.conf ../../../vendor/zte/$DEVICE/proprietary/ts.conf
 
 # EGL
 adb pull /system/lib/egl/libEGL_adreno200.so ../../../vendor/zte/$DEVICE/proprietary/libEGL_adreno200.so
@@ -144,7 +143,6 @@ PRODUCT_COPY_FILES += \\
     vendor/zte/__DEVICE__/proprietary/ti_gauge.bqfs:system/etc/ti_gauge.bqfs \\
     vendor/zte/__DEVICE__/proprietary/ti_gauge.dffs:system/etc/ti_gauge.dffs \\
     vendor/zte/__DEVICE__/proprietary/pointercal:system/etc/pointercal \\
-    vendor/zte/__DEVICE__/proprietary/ts.conf:system/etc/tsconf \\
     vendor/zte/__DEVICE__/proprietary/liboncrpc.so:system/lib/liboncrpc.so \\
     vendor/zte/__DEVICE__/proprietary/libqmi.so:system/lib/libqmi.so \\
     vendor/zte/__DEVICE__/proprietary/libdsm.so:system/lib/libdsm.so \\

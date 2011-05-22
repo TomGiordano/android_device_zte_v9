@@ -43,14 +43,6 @@ PRODUCT_PACKAGES += \
     SpareParts \
     Development \
     Term \
-    TSCalibration \
-    libtslib \
-    corgi \
-    dejitter \
-    inputraw \
-    linear \
-    pthres \
-    variance \
     gralloc.v9 \
     copybit.v9 \
     gps.v9 \

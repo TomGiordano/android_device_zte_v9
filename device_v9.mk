@@ -124,7 +124,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.hwrotation=270
 
 # V9 uses medium-density artwork where available
-PRODUCT_LOCALES += ldpi mdpi hdpi
+PRODUCT_LOCALES += ldpi mdpi
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise

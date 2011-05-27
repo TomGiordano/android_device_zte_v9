@@ -82,8 +82,8 @@
 #define	AUDIO_MAX_COMMON_IOCTL_NUM	100
 
 
-#define HANDSET_MIC			0x01
-#define HANDSET_SPKR			0x02
+//#define HANDSET_MIC			0x01
+//#define HANDSET_SPKR			0x02
 #define HEADSET_MIC			0x03
 #define HEADSET_SPKR_MONO		0x04
 #define HEADSET_SPKR_STEREO		0x05

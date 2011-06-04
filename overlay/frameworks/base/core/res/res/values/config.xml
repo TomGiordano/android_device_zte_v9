@@ -152,6 +152,9 @@
         <item>30</item>
     </integer-array>
 
+    <!-- Configure rotary outer radius -->
+    <integer name="config_rotaryOuterRadiusDIP">1020</integer>
+
     <!-- toggles weather device is tablet or phone. right now,
     tablets are know to have soft buttons, but phones have harware
     buttons. this might change in the future - especially when the
@@ -164,10 +167,5 @@
          It is recommended that this value be no more than 250 ms.
          This feature should be disabled for most devices. -->
     <integer name="config_virtualKeyQuietTimeMillis">250</integer>
-
-    <!-- disables display of lockscreen both on boot as on
-    power button press to wake devices. usful for devices you
-    dont carry in pockets -->
-    <bool name="cm_default_disable_lockscreen">true</bool>
 
 </resources>

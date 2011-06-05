@@ -26,7 +26,9 @@ chmod 755 ../../../vendor/zte/$DEVICE/proprietary/akmd2
 adb pull /system/bin/hci_qcomm_init ../../../vendor/zte/$DEVICE/proprietary/hci_qcomm_init
 chmod 755 ../../../vendor/zte/$DEVICE/proprietary/hci_qcomm_init
 
+# bluetooth
 adb pull /system/etc/init.qcom.bt.sh ../../../vendor/zte/$DEVICE/proprietary/init.qcom.bt.sh
+adb pull /system/etc/bluetooth/main.conf ../../../vendor/zte/$DEVICE/proprietary/main.conf
 
 # ti_gauge
 adb pull /system/etc/ti_gauge.bqfs ../../../vendor/zte/$DEVICE/proprietary/ti_gauge.bqfs
@@ -140,6 +142,7 @@ PRODUCT_COPY_FILES += \\
     vendor/zte/__DEVICE__/proprietary/libril-qcril-hook-oem.so:system/lib/libril-qcril-hook-oem.so \\
     vendor/zte/__DEVICE__/proprietary/libdiag.so:system/lib/libdiag.so \\
     vendor/zte/__DEVICE__/proprietary/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \\
+    vendor/zte/__DEVICE__/proprietary/main.conf:system/etc/bluetooth/main.conf \\
     vendor/zte/__DEVICE__/proprietary/ti_gauge.bqfs:system/etc/ti_gauge.bqfs \\
     vendor/zte/__DEVICE__/proprietary/ti_gauge.dffs:system/etc/ti_gauge.dffs \\
     vendor/zte/__DEVICE__/proprietary/pointercal:system/etc/pointercal \\

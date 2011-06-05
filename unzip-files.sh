@@ -24,9 +24,11 @@ chmod 755 ../../../vendor/zte/$DEVICE/proprietary/akmd2
 unzip -j -o ../../../${DEVICE}_update.zip system/bin/hci_qcomm_init -d ../../../vendor/zte/$DEVICE/proprietary/
 chmod 755 ../../../vendor/zte/$DEVICE/proprietary/hci_qcomm_init
 
+# bluetooth
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/init.qcom.bt.sh -d ../../../vendor/zte/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/bluetooth/main.conf -d ../../../vendor/zte/$DEVICE/proprietary/
 
-#ti_gauge
+# ti_gauge
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/ti_gauge.bqfs -d ../../../vendor/zte/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/ti_gauge.dffs -d ../../../vendor/zte/$DEVICE/proprietary/
 
@@ -138,6 +140,7 @@ PRODUCT_COPY_FILES += \\
     vendor/zte/__DEVICE__/proprietary/libril-qcril-hook-oem.so:system/lib/libril-qcril-hook-oem.so \\
     vendor/zte/__DEVICE__/proprietary/libdiag.so:system/lib/libdiag.so \\
     vendor/zte/__DEVICE__/proprietary/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \\
+    vendor/zte/__DEVICE__/proprietary/main.conf:system/etc/bluetooth/main.conf \\
     vendor/zte/__DEVICE__/proprietary/ti_gauge.bqfs:system/etc/ti_gauge.bqfs \\
     vendor/zte/__DEVICE__/proprietary/ti_gauge.dffs:system/etc/ti_gauge.dffs \\
     vendor/zte/__DEVICE__/proprietary/pointercal:system/etc/pointercal \\

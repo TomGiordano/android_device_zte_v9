@@ -34,6 +34,7 @@ public:
 
         virtual ~AudioPolicyManager() {}
 
+        virtual uint32_t getDeviceForStrategy(routing_strategy strategy, bool fromCache = true);
 protected:
         // true is current platform implements a back microphone
         virtual bool hasBackMicrophone() const { return false; }

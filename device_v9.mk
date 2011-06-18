@@ -49,6 +49,7 @@ PRODUCT_PACKAGES += \
     gps.v9 \
     libOmxCore \
     libOmxVidEnc \
+    FM \
     dexpreopt
 
 # proprietary side of the device

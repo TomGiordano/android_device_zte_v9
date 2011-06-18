@@ -1,4 +1,4 @@
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade)
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),v9)
 
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)

@@ -96,10 +96,7 @@ PRODUCT_COPY_FILES += \
 #Kernel Modules
 PRODUCT_COPY_FILES += \
     device/zte/v9/prebuilt/ar6000.ko:system/wifi/ar6000.ko \
-    device/zte/v9/prebuilt/cifs.ko:system/lib/modules/2.6.32.9-perf/cifs.ko \
-    device/zte/v9/prebuilt/tun.ko:system/lib/modules/2.6.32.9-perf/tun.ko \
-    device/zte/v9/prebuilt/slow-work.ko:system/lib/modules/2.6.32.9-perf/slow-work.ko \
-    device/zte/v9/prebuilt/nls_utf8.ko:system/lib/modules/2.6.32.9-perf/nls_utf8.ko
+    device/zte/v9/prebuilt/tun.ko:system/lib/modules/2.6.32.9-perf/tun.ko
 
 #WiFi firmware
 PRODUCT_COPY_FILES += \

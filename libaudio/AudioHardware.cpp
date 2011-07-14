@@ -109,7 +109,7 @@ static uint32_t SND_DEVICE_NO_MIC_HEADSET=-1;
 AudioHardware::AudioHardware() :
     mInit(false), mMicMute(true), mBluetoothNrec(true), mBluetoothId(0),
     mOutput(0), mSndEndpoints(NULL), mCurSndDevice(-1), mDualMicEnabled(false), mBuiltinMicSelected(false),
-    mFmRadioEnabled(false),mFmPrev(false),mFmVolume(0)
+    mFmRadioEnabled(false),mFmPrev(false),mFmVolume(0),fmfd(-1)
 {
    if (get_audpp_filter() == 0) {
            audpp_filter_inited = true;
@@ -186,9 +186,6 @@ AudioHardware::AudioHardware() :
         ioctl(m7xsnddriverfd, SND_AGC_CTL, &AUTO_VOLUME_ENABLED);
     }
 	else LOGE("Could not open MSM SND driver.");
-#ifdef HAVE_FM_RADIO
-    fmfd = open("/dev/si4708", O_RDWR);
-#endif
 }
 
 AudioHardware::~AudioHardware()
@@ -1158,6 +1155,8 @@ status_t AudioHardware::setFmOnOff(int onoff)
     int ret;
 
     if (onoff) {
+        if (fmfd < 0)
+            fmfd = open("/dev/si4708", O_RDWR);
         mFmRadioEnabled = true;
 	LOGV("mFmVolume=%i",mFmVolume);
 	if (ioctl(fmfd, Si4708_IOC_SET_VOL, &mFmVolume) < 0) {
@@ -1165,6 +1164,8 @@ status_t AudioHardware::setFmOnOff(int onoff)
             return -EIO;
         }
     } else {
+        close(fmfd);
+        fmfd = -1;
         mFmRadioEnabled = false;
     }
     LOGV("mFmRadioEnabled=%d", mFmRadioEnabled);

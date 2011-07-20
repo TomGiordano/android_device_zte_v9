@@ -93,19 +93,19 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun
 BOARD_UMS_LUNFILE := "/sys/devices/platform/msm_hsusb/gadget/lun0/file"
 
 # # cat /proc/mtd
-# dev:    size   erasesize  name
-# mtd0: 00480000 00020000 "recovery"
-# mtd1: 00480000 00020000 "boot"
+# mtd0: 00500000 00020000 "recovery"
+# mtd1: 00500000 00020000 "boot"
 # mtd2: 00180000 00020000 "splash"
-# mtd3: 00060000 00020000 "misc"
-# mtd4: 02940000 00020000 "cache"
-# mtd5: 0cf80000 00020000 "system"
-# mtd6: 0d020000 00020000 "userdata"
-# mtd7: 00180000 00020000 "persist"
+# mtd3: 00080000 00020000 "misc"
+# mtd4: 02580000 00020000 "cache"
+# mtd5: 0dc00000 00020000 "system"
+# mtd6: 0a280000 00020000 "userdata"
+# mtd7: 01500000 00020000 "oem"
+# mtd8: 00180000 00020000 "persist"
 
 
-BOARD_BOOTIMAGE_PARTITION_SIZE     := 0x00480000
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00480000
+BOARD_BOOTIMAGE_PARTITION_SIZE     := 0x00500000
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00500000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE   := 0x0cf80000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x0d020000
 BOARD_FLASH_BLOCK_SIZE := 131072
